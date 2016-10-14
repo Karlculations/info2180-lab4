@@ -9,7 +9,20 @@ window.onload = function(){ //load elements when the page/window loads
 	
 	start.addEventListener("mouseover", beginMaze);
 	
+	function restart(){
+		location.reload();
+	};
+	
+	function endMaze(){
+			if (hit === true){
+				alert("You lose");
+			}else{
+				alert("You win!");
+			}
+	};
+	
 	function beginMaze(){
+		start.addEventListener("click", restart);
 		boundary1.addEventListener("mouseover", mouseOver);
 		
 		for (var j = 0; j < boundary.length-1; j++){
@@ -24,15 +37,7 @@ window.onload = function(){ //load elements when the page/window loads
 			hit = true;
 		};		
 		
-		end.addEventListener("mouseover", endMaze);
-		
-		function endMaze(){
-			if (hit === true){
-				alert("You lose");
-			}else{
-				alert("You win!");
-			}
-		};
+		end.addEventListener("mouseover", endMaze);	
 	};
 	
 };
