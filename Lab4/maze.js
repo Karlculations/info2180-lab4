@@ -15,9 +15,11 @@ window.onload = function(){ //load elements when the page/window loads
 	
 	function endMaze(){
 			if (hit === true){
-				alert("You lose");
+				//alert("You lose!");
+				document.getElementById("status").innerHTML = "You lose!";
 			}else{
-				alert("You win!");
+				//alert("You win!");
+				document.getElementById("status").innerHTML = "You win!";
 			}
 	};
 	
